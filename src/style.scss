@@ -73,8 +73,19 @@
 
 //MainPage
 
+.information,.tours {
+  padding-top: 110px;
+  height: 500px;
+  width: 1024px;
+  background-size: cover;
+  background-image: url('./assets/Фон.png');
+  color: #FFFFFF;
+}
+
 .main_pages {
   width: 1024px;
+
+
 
   .mainPage_title {
     padding-top: 232px;

@@ -42,7 +42,7 @@ export class Footer extends Component {
 
     const Adress = new Component(Info.root, "div", ["Adress"], null);
     new Component(Adress.root, "img", ["AdressImg"], null, ["src",'alt'], ["../assets/location.png",'cart']);
-    new Component(Adress.root, "h3", ['footer_Adress'], 'г.Брест, ул. Советская, 67, 12 этаж',);
+    new Component(Adress.root, "h3", ['footer_Adress'], ' г.Брест, ул. Советская, 67,2 этаж',);
 
     
 
