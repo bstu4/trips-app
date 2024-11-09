@@ -1,0 +1,31 @@
+.main_pages {
+  width: 1024px;
+
+  .mainPage_title {
+    padding-top: 232px;
+    font-family: Inter;
+    font-size: 128px;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .mainPage_subtitle {
+    font-family: Inter;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 154px;
+    width: 516px;
+    height: 116px;
+    margin-left: 275px;
+    color: #ffffff;
+  }
+}
+.mainImg {
+  background-image: url("../../assets/Фон.png");
+  background-size: cover;
+  background-position: center;
+  height: 810px;
+}

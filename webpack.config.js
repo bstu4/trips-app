@@ -6,6 +6,12 @@ const MiniCssPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, argv) => ({
   entry: './src/App.ts', // путь к вашему исходному файлу
+  mode: 'production',
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    },
   module: {
     rules: [
         {
@@ -36,7 +42,7 @@ module.exports = (env, argv) => ({
     clean: true,
   },
   plugins: [
-    new MiniCssPlugin({ filename: './src/style.css' }),
+    new MiniCssPlugin({ filename: './src/sass/style.css' }),
     new HtmlWebpackPlugin({
       template: './src/index.html', // путь к HTML-шаблону
     }),
