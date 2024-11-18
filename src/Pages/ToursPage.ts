@@ -13,7 +13,7 @@ export class Tours extends Component {
   constructor(parent: HTMLElement, private service: LogicService) {
     super(parent, "div", ["tours"]);
 
-    new Component(this.root, "p", null, "Здесь будут туры");
+    new Component(this.root, "p", ['tours__title'], "КАДРЫ С ПУТЕШЕСТВИЙ");
 
     const divData = new Component(this.root, 'div', ["goods_pages__data"]);
     this.divButtons = new Component(divData.root, 'div', ['data__buttons']);

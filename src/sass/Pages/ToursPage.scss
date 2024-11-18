@@ -1,15 +1,56 @@
 .tours {
     padding-top: 110px;
-    height: 500px;
     width: 1024px;
     background-size: cover;
-    background-image: url('../../assets/Фон.png');
+    background: linear-gradient(180deg, #98AA9A -13.27%, #668174 75.65%);
     color: #FFFFFF;
+
+    .tours__title {
+      font-family: Inter;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 48.41px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin-top: 30px;
+      margin-bottom: 36px;
+    }
+    .data__buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 27px;
+    }
+    .criteria_button {
+      border: none;
+      color: #FFFFFF;
+      font-family: Inter;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 38.73px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      width: 229px;
+      height: 55px;
+      background: transparent;
+      margin-right: 38px;
+    }
+
+    .criteria_button:hover {
+      background: #D9D9D982;
+    }
+
+    .criteria_button:focus {
+      background:#D9D9D982;
+
+    }
   }
 
 .data__goods {
     display: flex;
-  
+    flex-wrap: wrap;
+    padding: 0px 120px 20px 120px;
   }
   
   .cart {
