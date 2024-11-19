@@ -13,10 +13,12 @@ export class Tours extends Component {
   constructor(parent: HTMLElement, private service: LogicService) {
     super(parent, "div", ["tours"]);
 
-    new Component(this.root, "p", ['tours__title'], "КАДРЫ С ПУТЕШЕСТВИЙ");
+    
 
     const divData = new Component(this.root, 'div', ["goods_pages__data"]);
-    this.divButtons = new Component(divData.root, 'div', ['data__buttons']);
+    const divSelector = new Component(divData.root, 'div', ["selector"]);
+    new Component(divSelector.root, "div", ["selected"],"Выбор тура");
+    this.divButtons = new Component(divSelector.root, 'div', ['data__buttons']);
     this.divGoods = new Component(divData.root, 'div', ["data__goods"]);
     service.addListener("updateGoodsOnPage", (goods) => {
       if (goods) this.updateGoodsOnPage(goods as TGood[]);

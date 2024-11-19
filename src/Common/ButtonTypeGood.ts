@@ -8,6 +8,10 @@ export class ButtonTypeGood extends Component {
 
         this.root.onclick = () => {
             service.updateGoodsByType(typeGood.id);
+            const selector = document.querySelector(".selected");
+            if (selector) {
+                selector.innerHTML = typeGood.title
+            }
         };
     }
 }

@@ -16,35 +16,7 @@
       margin-top: 30px;
       margin-bottom: 36px;
     }
-    .data__buttons {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 27px;
-    }
-    .criteria_button {
-      border: none;
-      color: #FFFFFF;
-      font-family: Inter;
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 38.73px;
-      text-align: center;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      width: 229px;
-      height: 55px;
-      background: transparent;
-      margin-right: 38px;
-    }
-
-    .criteria_button:hover {
-      background: #D9D9D982;
-    }
-
-    .criteria_button:focus {
-      background:#D9D9D982;
-
-    }
+    
   }
 
 .data__goods {
@@ -56,4 +28,77 @@
   .cart {
     border: 1px solid black;
     margin: 5px 5px 5px 5px;
+  }
+
+  .selector {
+    
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    background: #668174;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+  
+    .selected {
+      padding-left: 10px;
+      display: inline;
+      justify-content: space-between;
+      align-items: center;
+      width: 247px;
+      height: 340px;
+      text-align: center;
+      color: white;
+      font-family: Lora;
+      font-size: 28px;
+      font-weight: 400;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  
+  
+    .data__buttons {
+      display: none;
+      margin-left: 15px;
+      position: absolute;
+      background-color: #B2B2B2;
+  
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      width: 100%;
+      z-index: 1;
+    }
+  
+    .criteria_button {
+      height: 30px;
+      border: none;
+      padding-left: 10px;
+      cursor: pointer;
+    }
+
+    .criteria_button:first-child {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+  
+    .criteria_button:last-child {
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    .criteria_button:hover {
+      background-color: #ccc;
+    }
+  }
+  
+  .selector:hover .data__buttons,
+  .selector.active .data__buttons {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
   }
