@@ -9,7 +9,7 @@ export class Footer extends Component {
         "span",
         ['footer_title'],
         "Контакты"
-      );
+    );
     
     const infoDiv = new Component(
         this.root,

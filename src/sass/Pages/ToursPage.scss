@@ -19,86 +19,60 @@
     
   }
 
+.data__buttons {
+  margin-top: 30px;
+  margin-left: 20px;
+
+  .select_type_goods,.select_type_filter,.select_type_sort {
+    border-radius: 25px;
+    color: #FFFFFF;
+    width: 184px;
+    height: 36px;
+    background: #5E7563;
+    margin-right: 34px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    border: none;
+  }
+
+  
+}
+
 .data__goods {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 120px 20px 120px;
+    padding: 33px 120px 20px 120px;
   }
   
   .cart {
-    border: 1px solid black;
-    margin: 5px 5px 5px 5px;
-  }
+    margin: 10px;
 
-  .selector {
-    
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-top: 15px;
-    position: relative;
-    display: inline-block;
-    width: 200px;
-    background: #668174;
-    border: 1px solid #ccc;
-    border-radius: 16px;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-  
-    .selected {
-      padding-left: 10px;
-      display: inline;
-      justify-content: space-between;
-      align-items: center;
-      width: 247px;
-      height: 340px;
+    .cart_title {
+      width: 235px;
+      margin-top: 20px;
+      background: #D9D9D982;
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 38.73px;
       text-align: center;
-      color: white;
-      font-family: Lora;
-      font-size: 28px;
-      font-weight: 400;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      hyphens: manual;
+    }
+
+    .cart_subtitle {
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24.2px;
       text-align: center;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
     }
-  
-  
-    .data__buttons {
-      display: none;
-      margin-left: 15px;
-      position: absolute;
-      background-color: #B2B2B2;
-  
-      border: 1px solid #ccc;
-      border-radius: 16px;
-      width: 100%;
-      z-index: 1;
-    }
-  
-    .criteria_button {
-      height: 30px;
-      border: none;
-      padding-left: 10px;
-      cursor: pointer;
-    }
-
-    .criteria_button:first-child {
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-    }
-  
-    .criteria_button:last-child {
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-    }
-
-    .criteria_button:hover {
-      background-color: #ccc;
-    }
-  }
-  
-  .selector:hover .data__buttons,
-  .selector.active .data__buttons {
-    display: flex;
-    flex-direction: column;
-    border-radius: 16px;
   }

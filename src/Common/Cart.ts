@@ -8,7 +8,7 @@ export class Cart extends Component {
 
         new Component(this.root,'img', ["image_cart"], null , ["src", "alt"], ["../assets/cartImg.png", "good"]);
 
-        //new Component(this.root, "p", [], "Колличество - " + good.count + "шт");
-        //new Component(this.root, "p", [], good.title);
+        new Component(this.root, "p", ["cart_title"], good.title);
+        new Component(this.root, "p", ["cart_subtitle"], "Подробнее");
     }
 }

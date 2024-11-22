@@ -5,7 +5,7 @@ export class DBService {
 
     async getTypesGoods(): Promise<TTypesGoods> {
         const responce = await fetch(
-            this.domain + "is10_09?sSd_=0&sfil_n=2&svid_=3&sgr_l=160&sit_l=100&sgr_r=0&stst_=0&shead_=0&sadd_=5,86"
+            this.domain + "is10_09?sSd_=0&sfil_n=2&svid_=3&sgr_l=160&sit_l=100&sgr_r=0&stst_=0&shead_=0&sadd_=5,117"
         );
 
         const data = (await responce.json()) as TTypesGoods;
@@ -15,19 +15,20 @@ export class DBService {
 
     async getAllGoods(): Promise<TGoodsResponse> {
         const responce = await fetch(
-            this.domain + "is10_09?sSd_=0&sfil_n=2&svid_=3&sgr_l=160&sit_l=110&sgr_r=0&stst_=0&shead_=0&sadd_=5,86,"
+            this.domain + "is10_09?sSd_=0&sfil_n=2&svid_=3&sgr_l=160&sit_l=110&sgr_r=0&stst_=0&shead_=0&sadd_=5,117,"
         );
         const data = (await responce.json()) as TGoodsResponse;
+        console.log(data);
         
         return data;
     }
 
-    async getGoodsByType(idGood: number): Promise<TGoodsResponse> {
+    async getGoodsByType(idGood: string): Promise<TGoodsResponse> {
         const responce = await fetch(
-            this.domain + "is10_09?sSd_=0&sfil_n=2&svid_=3&sgr_l=160&sit_l=110&sgr_r=0&stst_=0&shead_=0&sadd_=5,86," + idGood
+            this.domain + "is10_09?sSd_=0&sfil_n=2&svid_=3&sgr_l=160&sit_l=110&sgr_r=0&stst_=0&shead_=0&sadd_=5,117," + idGood
         );
         const data = (await responce.json()) as TGoodsResponse;
-        
+        console.log(data);
         return data;
     }
 }
