@@ -2,6 +2,7 @@ import { Component } from "./Abstract/Componets";
 import { Footer } from "./Common/Footer";
 import { Header } from "./Common/Header";
 import { Router } from "./Common/Router";
+import { DetailsPage } from "./Pages/DetailsPage";
 import { Information } from "./Pages/InformationPage";
 import { MainPage } from "./Pages/MainPage";
 import { Tours } from "./Pages/ToursPage";
@@ -22,6 +23,7 @@ class App {
       "#": new MainPage(main.root),
       "#tours": new Tours(main.root, logicService),
       "#information": new Information(main.root),
+      "#details": new DetailsPage(main.root,  logicService)
     };
     new Router(links);
 

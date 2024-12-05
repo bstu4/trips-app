@@ -94,4 +94,10 @@ export class LogicService extends Observer {
 
         this.dispatch("updateGoodsOnPage", sortGoods);
     }
+
+    openPageDetails(good: TGood): void {
+        this.dispatch("updatePageDetails", good);
+        window.location.hash = "#details";
+    }
+    
     }

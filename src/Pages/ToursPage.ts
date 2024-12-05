@@ -36,13 +36,16 @@ export class Tours extends Component {
     this.service.getTypesGoods().then((typesGoods) => {
       if (this.divButtons) {
         new SelectTypeGoods(this.divButtons.root,this.service, typesGoods);
-        new SelectFilter(this.divButtons.root, this.service, "Количество человек", ['1', '2', '3'], 'peopleCount');
 
-
-        const sortButton = new Component(this.divButtons.root, 'input', ['select_type_sort'], "", ["type","value"], ["button", "сортировка"])
+        const sortButton = new Component(this.divButtons.root, 'input', ['select_type_sort'], "", ["type", "src", "role", "width"], ["image","../assets/sortImg.png" , "button", "45px"])
           sortButton.root.onclick = () => {
             this.service.changeSortGoods();
           };
+          
+        new SelectFilter(this.divButtons.root, this.service, "Количество человек", ['1', '2', '3'], 'peopleCount');
+
+
+        
       }
       
       this.service.updateGoodsByType('');

@@ -23,7 +23,26 @@
   margin-top: 30px;
   margin-left: 20px;
 
-  .select_type_goods,.select_type_filter,.select_type_sort {
+
+  .select_type_sort {
+    position: relative;
+    top: 10px;
+    border-radius: 10px;
+    width: 50px;
+    height: 36px;
+    color: #FFFFFF;
+    background: #5E7563;
+    margin-right: 34px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    border: none;
+  }
+  .select_type_goods,.select_type_filter {
     border-radius: 25px;
     color: #FFFFFF;
     width: 184px;

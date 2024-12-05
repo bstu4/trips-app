@@ -1,0 +1,107 @@
+.details_page {
+    padding-top: 100px;
+    display: flex;
+    background: #6b8578;
+    width: 1024px;
+    padding-bottom: 50px;
+    //justify-content: center;
+
+    img {
+        margin: 27px 15px 0px 24px;
+    }
+
+    .itemDiv {
+        width: 70%;
+    }
+
+    h2 {
+        margin: 0px 20% 0px 20%;
+        hyphens: manual;
+        background: #D9D9D982;
+        margin-top: 27px;
+        font-family: Lora;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 46.08px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: white;
+    }
+
+    .attribute {
+        margin-top: 15px;
+
+        .attribute_div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        
+            .type { grid-area: 1 / 1 / 2 / 2; }
+            .value { grid-area: 1 / 2 / 2 / 3; }
+        }
+    }
+    .type {
+        color: white;
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .main_subtitle {
+        
+        margin-left: 38%;
+        margin-top: 15px;
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29.05px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: white;
+    }
+
+    .value {
+        position: relative;
+        color: white;
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24.2px;
+        //text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    button {
+        background: #D9D9D982;
+        border: none;
+        width: 154px;
+        height: 39px;
+        margin-left: 160px;
+    }
+
+    .cartButton {
+        margin-top: 22px;
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29.05px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        width: 226.83px;
+        height: 39px;
+        background: #4D5A54;
+        color: white;
+        border: none;
+    }
+}
+
+

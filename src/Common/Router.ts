@@ -1,4 +1,5 @@
 import { Page } from "../Abstract/Inteface";
+import { DetailsPage } from "../Pages/DetailsPage";
 
 export class Router {
   constructor(public links: Record<string, Page>) {
@@ -18,6 +19,12 @@ export class Router {
       this.links["#tours"].renderWithUpdate();
     } else if (url === "information") {
       this.links["#information"].renderWithUpdate();
+    } else if (url === "details"){
+        if ((this.links["#details"] as DetailsPage).isGoodInDetailsPage()) {
+          this.links["#details"].renderWithUpdate();
+        } else {
+          window.location.hash = "#magazine";
+        }
     } else {
       this.links["#"].renderWithUpdate();
     }
