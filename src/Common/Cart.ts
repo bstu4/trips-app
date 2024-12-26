@@ -6,7 +6,7 @@ export class Cart extends Component {
     constructor(parent: HTMLElement, private service: LogicService, private good: TGood) {
         super(parent,'div', ["cart"]);
 
-        new Component(this.root,'img', ["image_cart"], null , ["src", "alt"], ["../assets/cartImg.png", "good"]);
+        new Component(this.root,'img', ["image_cart"], null , ["src", "alt"], [good.photoLink, "good"]);
 
         new Component(this.root, "p", ["cart_title"], good.title);
         new Component(this.root, "a", ["cart_subtitle"], "Подробнее");
