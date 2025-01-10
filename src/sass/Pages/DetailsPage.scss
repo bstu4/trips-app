@@ -6,16 +6,15 @@
     padding-bottom: 50px;
     //justify-content: center;
 
-    img {
-        margin: 27px 15px 0px 24px;
-    }
-
     .itemDiv {
-        width: 70%;
+        width: 100%;
     }
 
+    .prop {
+        margin-left: 15%;
+    }
     h2 {
-        margin: 0px 20% 0px 20%;
+        margin: 0px 150px 0px 150px;
         hyphens: manual;
         background: #D9D9D982;
         margin-top: 27px;
@@ -55,7 +54,7 @@
 
     .main_subtitle {
         
-        margin-left: 38%;
+        margin-left: 44%;
         margin-top: 15px;
         font-family: Inter;
         font-size: 24px;
@@ -79,7 +78,7 @@
         text-decoration-skip-ink: none;
     }
 
-    button {
+    .button {
         background: #D9D9D982;
         border: none;
         width: 154px;
@@ -88,6 +87,7 @@
     }
 
     .cartButton {
+        margin-left: 40%;
         margin-top: 22px;
         font-family: Inter;
         font-size: 24px;
