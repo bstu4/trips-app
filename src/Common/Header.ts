@@ -21,7 +21,7 @@ export class Header extends Component {
     const cart = new Component(this.root, "a", ['header_cart'], null, ["href"], ["#"]);
     new Component(cart.root, "img", ["header_cart"], null, ["src",'alt'], ["../assets/корзина 1.png",'cart']);
     
-    const profile = new Component(this.root, "a", ['header_profile'], null, ["href"], ["#gerger"]);
+    const profile = new Component(this.root, "a", ['header_profile'], null, ["href"], ["#auth"]);
     new Component(profile.root, "img", ["header_profile"], null, ["src",'alt'], ["../assets/пользователь 1.png",'profile']);
 
     

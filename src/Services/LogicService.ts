@@ -1,8 +1,9 @@
 import { Observer } from "../Abstract/Observer";
-import { TGood, TGoodResponse, TTypeField, TTypeGood, TValueField } from "../Abstract/Types";
+import { TCustomer, TGood, TGoodResponse, TTypeField, TTypeGood, TValueField } from "../Abstract/Types";
 import { DBService } from "./DBService";
 
 export class LogicService extends Observer {
+    userCustomer: TCustomer | null = null;
 
     goodsDB: TGood[] | null = null;
 
@@ -100,4 +101,50 @@ export class LogicService extends Observer {
         window.location.hash = "#details";
     }
     
+    registrationCustomer(name:string, email:string, mobile:string, operatorType: string, adress: string): void {
+        this.dbService.registrationCustomer(name,email, mobile ,operatorType, adress).then((responce) => {
+            if (responce) {
+                this.dispatch("confirm_registration", responce);
+            } else {
+                alert("Сбой регистрации");
+            }
+        });
     }
+
+    identificationCustomer(mobile:string): void {
+        this.dbService.identificationCustomer(mobile).then((response) => {
+            if (response) {
+                this.dispatch("confirm_identification", response);
+            } else {
+                alert("Сбой авторизации.");
+            }
+        })
+    }
+    confirmRegistrationCustomer(customerId:string, code:string):void {
+        this.dbService.confirmRegistrationCustomer(customerId, code).then((responce) => {
+            if (responce) {
+                this.dispatch("end_registration", responce);
+            } else {
+                alert("Сбой авторизации.");
+            }
+        });
+    }
+
+    confirmIdentificationCustomer(customerId: string, code: string): void {
+        
+        this.dbService.confirmIdentificationCustomer(customerId, code).then((responce) => {
+            if (responce) {
+                if (responce.error.code == 0) this.userCustomer = responce.customer;
+                this.dispatch("end_identification", responce);
+            } else {
+                alert("Сбой авторизации.");
+            }
+        });
+    }
+
+    getUserCustomer(): TCustomer | null {
+        console.log(this.userCustomer);
+        
+        return this.userCustomer;
+    }
+}

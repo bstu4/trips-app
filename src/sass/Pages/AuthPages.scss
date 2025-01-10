@@ -1,0 +1,62 @@
+.reg_pages {
+    background-color: #f1f1ef;
+    width: 1024px;
+    background-image: url("../../assets/backAuth.png");
+    padding-top: 150px;
+    height: 703px;
+
+    .form {
+        border-radius: 15px;
+        padding: 15px 15px 15px 15px;
+        background: #FFFFFF6B;
+        margin-left: 35%;
+        padding-bottom: 30px;
+        width: 370px;
+
+        div {
+            margin-bottom: 5px;
+        }
+    }
+
+    p {
+        font-family: Inter;
+        font-size: 110px;
+        font-weight: 600;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 30px;
+    }
+
+    input,select {
+        background: #C6C6C5;
+        font-size: 20px;
+        color: white;
+    }
+    
+    label,span {
+        margin-bottom: 15px;
+        margin-right: 10px;
+        font-family: Inter;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration-skip-ink: none;
+        color: white;
+    }
+
+    .buttonAddCustomer {
+        margin-left: 130px;
+        margin-top: 15px;
+        background: rgba(84, 96, 85, 0.62);
+        width: 130px;
+        height: 32px;
+        color: white;
+        font-family: Inter;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 18.15px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+}

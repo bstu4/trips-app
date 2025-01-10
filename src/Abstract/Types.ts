@@ -1,3 +1,4 @@
+
 export type TTypeGood = {
     id:number;
     title: string;
@@ -25,6 +26,8 @@ export type TGoodResponse = {
     title: string;
     orderDB: number;
     price: number;
+    photoLink: string;
+    slider: string[];
     valueFields: TValueField[];
     typeFields: TTypeField[];
 }
@@ -35,4 +38,31 @@ export type TGoodsResponse = {
 
 export type TGood = TGoodResponse & {
     fields: Record<string,string | number | Date>;
+};
+
+export type TRegistrationResponse = {
+    message:string;
+    customerId: string;
+    error: {
+        message:string;
+        code:number;
+    };
+};
+
+export type TCustomer = {
+    id:string;
+    name: string;
+    email: string;
+    operatorType: string;
+    mobile:string;
+    adress: string;
+};
+
+export type TIdentificationResponce = {
+    message:string;
+    customer: TCustomer;
+    error: {
+        message:string;
+        code:number;
+    };
 };
